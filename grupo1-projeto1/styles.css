@@ -1,16 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
 
-*{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark--grayish--magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+
+  font-family: "Spartan", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 374px;
+  margin: 0 auto;
+}
+
+.pattern-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pattern-top-desktop {
+  display: none;
+}
+
+.page-header {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--very-dark-magenta);
+  margin: 80px 30px 0 30px;
+}
+
+.page-description {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark--grayish--magenta);
+  line-height: 1.5rem;
+  margin: 20px 22px 0 22px;
+}
+
+.review-container {
+  margin: 30px 22px 0 22px;
+  padding: 15px;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stars {
+  text-align: center;
+}
+
+.stars img {
+  margin: 0 2px;
+}
+
+.reviewer {
+  margin-top: 10px;
+}
+
+.reviewer-text {
+  color: var(--very-dark-magenta);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.testimonial-card {
+  margin: 30px 22px;
+  background-color: var(--very-dark-magenta);
+  padding: 40px 30px;
+  border-radius: 10px;
+}
+
+.author {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.author-pic {
+  max-width: 50px;
+}
+
+.author-pic img {
+  border-radius: 50px;
+  width: 40px;
+}
+
+.author-info {
+  margin-left: 22px;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5rem;
+}
+
+.author-verify {
+  font-size: 0.9rem;
+  color: var(--soft-pink);
+  font-weight: 400;
+  line-height: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 0.82rem;
+  color: white;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+  font-size: 11px;
+  text-align: center;
+  margin: 30px 80px;
+  line-height: 1.2rem;
+}
+
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
+}
+
+.pattern-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.pattern-bottom-desktop {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .pattern-top-desktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
+  .pattern-top {
+    display: none;
+  }
+
+  body {
+    max-width: 100%;
+    margin: 125px 150px 80px 150px;
+  }
+
+  .desktop-page-reviews {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header {
+    font-size: 3rem;
+    color: var(--very-dark-magenta);
+    margin: 0;
+    text-align: left;
+    max-width: 400px;
+  }
+
+  .page-description {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark--grayish--magenta);
+    line-height: 1.5rem;
+    margin: 10px 0;
+    max-width: 500px;
+  }
+
+  .reviews-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 500px;
+  }
+
+  .review-container {
+    margin: 0;
+    padding: 15px 25px;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width:430px;
+  }
+
+  #second-review{
+      align-self: center;
+  }
+
+  #third-review{
+      align-self: flex-end;
+  }
+  
+  .reviewer {
+    margin-top: 0;
+    margin-left: 22px;
+    margin-right: 30px
+  }
+
+  .reviewer-text {
+    color: var(--very-dark-magenta);
+    font-size: 0.78rem;
+    font-weight: bold;
+  }
+
+  .desktop-testimonials{
+    display: inline-flex;
+    height: 400px;
+    justify-content:space-between;
+    margin-top:30px;
+    gap: 30px;
+  }
+
+  .testimonial-card{
+      height: 250px;
+      margin:0;
+  }
+
+  #mid-card{
+      align-self:center;
+  }
+
+  #last-card{
+      align-self: flex-end;
+  }
+
+
+  .pattern-bottom-desktop {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  }
+
+  .pattern-bottom {
+    display: none;
+  }
+}
